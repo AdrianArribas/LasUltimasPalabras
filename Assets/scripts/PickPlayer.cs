@@ -40,7 +40,7 @@ public class PickPlayer : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider colision) {
-		if (colision.tag == "moneda2" && carry==false) {
+		if (colision.tag == "moneda" && carry==false) {
 			Debug.Log ("jugador detectado");
 			objetoRB = colision.gameObject.GetComponent <Rigidbody>();
 			objetoTransform = objetoRB.transform;
@@ -48,7 +48,7 @@ public class PickPlayer : MonoBehaviour {
 			isOnArea = true;
 		}
 
-		if (colision.tag == "palmera" && carry == true) {
+		if (colision.tag == "pila" && carry == true) {
 			isOnDropArea = true;
 			Debug.Log ("Zona drop");
 		}
